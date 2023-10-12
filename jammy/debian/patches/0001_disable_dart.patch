@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 587a3166a9..08b906e0f0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -241,6 +241,8 @@ else()
+   build_error("CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE} unknown. Valid options are: Debug Release RelWithDebInfo Profile Check")
+ endif()
+ 
++set (HAVE_DART FALSE)
++
+ #####################################
+ # Handle CFlags
+ # USE_UPSTREAM_CFLAGS (default TRUE)
