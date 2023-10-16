@@ -39,20 +39,20 @@ override_dh_auto_configure:
 # Generate Doxygen HTML documentation.
 # Currently broken:
 # https://bitbucket.org/osrf/gazebo/issue/1141
-#override_dh_auto_build-indep:	
+#override_dh_auto_build-indep:
 	#dh_auto_build -- doc
 
 override_dh_install:
 	dh_install -- # Install.
 
 	# Install icon
-	mkdir -p debian/gazebo11/usr/share/icons/hicolor/scalable/apps/
+	mkdir -p debian/gazebo/usr/share/icons/hicolor/scalable/apps/
 	install -m 644 gazebo/gui/images/gazebo.svg \
-	    debian/gazebo11/usr/share/icons/hicolor/scalable/apps/gazebo.svg	
+	    debian/gazebo/usr/share/icons/hicolor/scalable/apps/gazebo.svg
         # Install desktop file
-	mkdir -p debian/gazebo11/usr/share/applications/
+	mkdir -p debian/gazebo/usr/share/applications/
 	install -m 644 ./debian/gazebo.desktop \
-	    debian/gazebo11/usr/share/applications/
+	    debian/gazebo/usr/share/applications/
 
 # No test for now. Need some refactor work first
 override_dh_auto_test:
@@ -60,7 +60,7 @@ override_dh_auto_test:
 	#dh_auto_test || true
 
 override_dh_strip:
-	dh_strip -a --dbg-package=gazebo11-dbg
+	dh_strip -a --dbg-package=gazebo-dbg
 
 %:
-	dh $@ --parallel --with bash-completion  
+	dh $@ --parallel --with bash-completion
