@@ -82,7 +82,7 @@ Package: gazebo
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libgazebo (= ${binary:Version}),
+         libgazebo11 (= ${binary:Version}),
          gazebo-common (>= 11.2.0)
 Recommends: gazebo-plugin-base
 Suggests: gazebo-doc
@@ -103,7 +103,7 @@ Description: Open Source Robotics Simulator
  and physically plausible interactions between objects (it includes an
  accurate simulation of rigid-body physics).
 
-Package: libgazebo
+Package: libgazebo11
 Section: libs
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
@@ -164,7 +164,7 @@ Depends: libtbb-dev,
          libdart6-utils-urdf-dev (<< 6.13.0) | libdart-utils-urdf-dev (<< 6.13.0),
          libdart6-external-odelcpsolver-dev (<< 6.13.0) | libdart-external-odelcpsolver-dev (<< 6.13.0),
          libdart6-external-ikfast-dev (<< 6.13.0) | libdart-external-ikfast-dev (<< 6.13.0),
-         libgazebo (= ${binary:Version}),
+         libgazebo11 (= ${binary:Version}),
          gazebo-common (>= 11.2.0),
          gazebo-plugin-base (= ${source:Version}),
          ${misc:Depends}
